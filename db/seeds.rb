@@ -18,4 +18,18 @@ puts "Creating freebies..."
 # ***************************************************************
 # Create freebies Here
 
+# t.string "item_name"
+# t.integer "value"
+# t.integer "dev_id"
+# t.integer "company_id"
+
+20.times do
+Freebie.create(
+    item_name: Faker::Game.title, 
+    value: rand(41..44),
+    dev_id: rand(41..44),
+    company_id: rand(41..44),
+    )
+end
+
 puts "Seeding done!"
